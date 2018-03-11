@@ -126,7 +126,10 @@ class TestApiWrapper
      */
     public function getBooksByAuthor($authorID, array $params = [])
     {
-        return $this->get('authors/' . (int)$authorID . '/books', $params);
+
+        $result = $this->get('authors/' . (int)$authorID . '/books', $params);
+
+        return !empty($result['books']) ? $result['books'] : [];
     }
 
     /**
@@ -135,6 +138,8 @@ class TestApiWrapper
      */
     public function getAuthors(array $params = [])
     {
-        return $this->get('authors', $params);
+        $result = $this->get('authors', $params);
+
+        return !empty($result['authors']) ? $result['authors'] : [];
     }
 }
