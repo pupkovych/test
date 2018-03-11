@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ramires
- * Date: 11.03.2018
- * Time: 19:18
- */
 
 /**
  * Class TestApiWrapper
